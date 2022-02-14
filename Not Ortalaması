@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class not {
+    public static void main(String[] args){
+        // değişkenleri oluştur
+        int mat,kimya,fizik,turkce,tarih,biyoloji,anatomi;
+
+        // Scanner sınıfı tanımla
+        Scanner inp = new Scanner(System.in);
+
+        //kullanıcıdan değerleri al
+        System.out.print("Matematik Notunuz: ");
+        mat = inp.nextInt();
+        System.out.print("Kimya Notunuz: ");
+        kimya = inp.nextInt();
+        System.out.print("Fizik Notunuz: ");
+        fizik = inp.nextInt();
+        System.out.print("Türkçe Notunuz: ");
+        turkce = inp.nextInt();
+        System.out.print("Tarih Notunuz: ");
+        tarih = inp.nextInt();
+        System.out.print("Biyoloji Notunuz: ");
+        biyoloji = inp.nextInt();
+        System.out.print("Anatomi Notunuz: ");
+        anatomi = inp.nextInt();
+
+        int toplam = (mat+kimya+fizik+anatomi+biyoloji+tarih+turkce);
+        double ortalama = (toplam/7);
+        System.out.println("Not Ortalaması: "+ ortalama);
+
+        String sonuc = 60 < ortalama ? "Geçtiniz" : "Kaldınız";
+        System.out.println(sonuc);
+    }
+}
