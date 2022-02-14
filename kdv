@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class kdv {
+    public static void main(String[] args) {
+        double tutar, kdvOran;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ürün Tutarı  : ");
+        tutar=scanner.nextDouble();
+        if (tutar>=0 && tutar<=1000){
+            kdvOran=0.18;
+            double kdvTutar=tutar*kdvOran;
+            double kdvliTutar=tutar+kdvTutar;
+            System.out.println("KDV tutar:" +kdvTutar +"tl" );
+            System.out.println("%18 kdv ile yeni tutar  : " + kdvliTutar + " " + "tl"+ "   powerofTurkey");
+
+        }
+        else if (tutar>1000)
+        {
+            kdvOran =0.08;
+            double kdvTutar=tutar*kdvOran;
+            double kdvliTutar=tutar+kdvTutar;
+            System.out.println("KDV Oranı: "+ kdvTutar+"tl");
+            System.out.println("%8 kdv ile yeni fiyat   : " +kdvliTutar+"tl");
+        }
+        else
+        {
+            System.out.println("Fiyatınızı algılayamadım:( isterseniz tekrar yazın ona göre size fiyat biçeyim rhgfkregfkrk");
+        }
+    }
+}
