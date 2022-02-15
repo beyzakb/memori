@@ -1,0 +1,21 @@
+package Giris;
+import java.util.Scanner;
+public class daire {
+    public static void main(String[] args) {
+        float r,pi = 3.14f,aci,alan,cevre,dilimalan;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Yarı Çapı Giriniz: ");
+        r = input.nextFloat();
+
+        System.out.print("Alfa Acısını Giriniz: ");
+        aci = input.nextFloat();
+
+        alan = pi * r * r;
+        cevre = 2 * pi * r;
+        dilimalan = (alan*aci)/360;
+
+        System.out.println("Dairenin Cevresi: "+cevre + "\n" + "Dairenin Alanı: "+alan + "\n" + "Acı Dilim Alan: " + dilimalan );
+    }
+}
