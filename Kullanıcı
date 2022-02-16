@@ -1,0 +1,42 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class sifre {
+    public static void main(String[] args) {
+       String username,password,response;
+
+       Scanner inp = new Scanner(System.in);
+       System.out.print("Kullanıcı Adınız: ");
+       username = inp.nextLine();
+       
+       System.out.print("Şifrenizi Giriniz:");
+       password = inp.nextLine();
+
+
+        if (username.equals("Patika") && password.equals("java123456")) {
+            System.out.print("Hoşgeldin Paşam!");
+        } else {
+            if (!username.equals("Patika")) {
+                System.out.print("Adınızı mı unuttunuz?");
+            } else if (!password.equals("java123456")) {
+                System.out.print("şifreni bir daha düşün derim!");
+                System.out.println("\nya da düşünmeden tekrar oluşturabilirsin... ");
+                response = inp.nextLine();
+                if (response.equals("P")) {
+                    System.out.print("yeppyeni şifren: ");
+                    password = inp.nextLine();
+                    if (!password.equals("java123456")) {
+                        System.out.print("Hayırlı olsun yeni şifren!");
+                    } else {
+                        System.out.println("yeni şifren oluşturulmadı!");
+                        System.out.print("tekrar düşünde gel koçum!");
+                    }
+                }
+            }
+            System.out.println("\nUmarım uslu durursun:)))");
+        }
+
+    }
+
+}
