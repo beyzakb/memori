@@ -1,0 +1,55 @@
+package Giris;
+import java.util.Scanner;
+
+public class sinif{
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        double mat,fizik,turkce,kimya,muzik,toplam=0,average;
+        int counter = 0;
+
+        System.out.print("Matematik notunuz: ");
+        mat = inp.nextDouble();
+        if (mat >= 0 && mat <= 100) {
+            toplam += mat;
+            counter++;
+        }
+
+        System.out.print("Fizik notunuz: ");
+        fizik = inp.nextDouble();
+        if (fizik >= 0 && fizik <= 100) {
+            toplam += fizik;
+            counter++;
+        }
+
+        System.out.print("Türkçe notunuz: ");
+        turkce = inp.nextDouble();
+        if (turkce >= 0 && turkce <= 100) {
+            toplam += turkce;
+            counter++;
+        }
+
+        System.out.print("Kimya notunuz: ");
+        kimya = inp.nextDouble();
+        if (kimya >= 0 && kimya <= 100) {
+            toplam += kimya;
+            counter++;
+        }
+
+        System.out.print("Müzik notunuz: ");
+        muzik = inp.nextDouble();
+        if (muzik >= 0 && muzik <= 100) {
+            toplam += muzik;
+            counter++;
+        }
+
+        average = toplam / counter;
+
+        System.out.println("Ortalama notunuz: " + average);
+
+        if (average >= 55) {
+            System.out.println("Tebrikler, iyi geçtiniz!");
+        } else {
+            System.out.println("Üzgünüm, sınıfta kaldınız.");
+        }
+    }
+}
