@@ -1,0 +1,51 @@
+package Giris;
+import java.util.Scanner;
+
+public class airticket {
+    public static void main(String[] args) {
+        int age,distance,type;
+        double tutar = 0;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Mesafeyi giriniz: ");
+        distance = inp.nextInt();
+        System.out.println("Yaşınız: ");
+        age = inp.nextInt();
+
+        System.out.println("Bilet Tipini Seçiniz:\n1-Gidiş-Dönüş\n2-Tek Yön ");
+        type = inp.nextInt();
+
+        if (age < 0 || distance < 0 || (type < 1 || type > 2)) {
+            System.out.println("Ne yazdığınıza dikkat edin!");
+
+        }
+        else {
+            tutar = distance *0.10;
+            if (age < 12) {
+                tutar = tutar / 2;
+
+            } else if (age >= 12 && age <= 24) {
+                tutar = tutar *0.10;
+            } else if (age > 65) {
+                tutar = tutar * 3 / 10;
+            }
+            else {
+                tutar= distance*0.10;
+            }
+        }
+        if (type == 1) {
+            System.out.println("Toplam tutar: " + (tutar*2/10) + " TL");
+        }
+        else if (type ==2) {
+            System.out.println("Toplam tutar: " + tutar + " TL");
+        }
+        else {
+            System.out.println("Hatalı giriyorsunuz!!!!");
+        }
+
+
+
+
+
+    }
+}
