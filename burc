@@ -1,0 +1,127 @@
+package Giris;
+import java.util.Scanner;
+public class burc {
+    public static void main(String[] args) {
+        int month,day;
+        String sign;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Doğduğunuz ay:  ");
+        month = inp.nextInt();
+        System.out.print("Doğduğunuz gün: ");
+        day = inp.nextInt();
+
+
+        if (month==1) {
+            if(day<=21) {
+                sign = "Oğlak";
+                System.out.println("Burcunuz:" + sign);
+            }else{
+                sign = "Kova";
+                System.out.println("Burcunuz:" +sign);
+            }
+
+        }else if(month==2) {
+            if (day <= 19) {
+                sign = "Kova";
+                System.out.println("Burcunuz: " + sign);
+            } else{
+                sign = "Ballık";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==3) {
+            if (day <= 20) {
+                sign = "Ballık";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Koç";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+
+        }else if(month==4) {
+            if (day <= 20) {
+                sign = "Koç";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Boğa";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==5) {
+            if (day <= 21) {
+                sign = "Boğa";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "İkizler";
+                System.out.println("Burcunuz: " + sign);
+            }
+        }else if(month==6) {
+            if (day <= 22) {
+                sign = "İkizler";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Yengeç";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==7) {
+            if (day <= 22) {
+                sign = "Yengeç";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Aslan";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==8) {
+            if (day <= 22) {
+                sign = "Aslan";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Başak";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==9) {
+            if (day <= 22) {
+                sign = "Başak";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Terazi";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+
+        }else if(month==10) {
+            if (day <= 22) {
+                sign = "Terazi";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Akrep";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==11) {
+            if (day <= 21) {
+                sign = "Akrep";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Yay";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }else if(month==12) {
+            if (day <= 21) {
+                sign = "Yay";
+                System.out.println("Burcunuz: " + sign);
+            } else {
+                sign = "Oğlak";
+                System.out.println("Burcunuz: " + sign);
+            }
+
+        }
+
+
+    }
+}
