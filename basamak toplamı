@@ -1,0 +1,22 @@
+package Giris;
+import java.util.Scanner;
+//Bir sayının basamak sayılarının toplamını hesaplayan program yazınız.
+//Örnek : 1643 = 1 + 6 + 4 + 3 = 14
+public class BasamakSayi {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("sayı Giriniz: ");
+        
+        int num = input.nextInt();
+        int sum = 0;
+        int rem;
+
+        while (num != 0) {
+            rem = num%10;
+            sum += rem;
+            num =  (num - rem) / 10;
+        }
+
+        System.out.print("Sum: " + sum);
+    }
+}
